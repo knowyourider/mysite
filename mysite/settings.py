@@ -11,18 +11,14 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sql_server.pyodbc',
-        # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'. sql_server.pyodbc
-        'NAME': 'django_db', # mssql:django_db mysql:django_test # Or path to database file if using sqlite3.
-        # The following settings are not used with sqlite3:
-        'USER': 'django_user',
-        'PASSWORD': 'django_pass',
-        'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
-        'PORT': '',                      # Set to empty string for default. 3306
-        'DATABASE_OPTIONS': {
-            'driver': 'SQL Native Client',
-            'MARS_Connection': True,
-        }
+        #'ENGINE': 'django.db.backends.sqlite3',
+        #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'mytestdb',
+        'USER': 'don',
+        'PASSWORD': '',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
   
